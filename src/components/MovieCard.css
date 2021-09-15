@@ -1,6 +1,12 @@
 .card {
+  width: 100%;
   margin-top: 2rem;
 }
+
+.image {
+  width: 100%;
+}
+
 .image:hover {
   opacity: 0.75;
 }
@@ -13,6 +19,9 @@
   margin-top: 0.5rem;
   font-size: 1.125rem;
   line-height: 1.75rem;
+  color: inherit;
+  text-decoration: inherit;
+  background-color: transparent;
 }
 
 .movie-name:hover {
@@ -30,6 +39,16 @@
 
 .rating {
   margin-left: 0.25rem;
+  color: #cbd5e0;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.year {
+  margin-left: 0.25rem;
+  color: #cbd5e0;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
 }
 
 .space {
@@ -38,12 +57,35 @@
 }
 
 .genres {
-  color: rgba(156, 163, 175);
+  color: #cbd5e0;
   font-size: 0.875rem;
   line-height: 1.25rem;
 }
 
 .svg {
   width: 1rem;
-  color: rgba(245, 158, 11);
+  fill: rgba(245, 158, 11);
+}
+
+@media (min-width: 640px) {
+  .card {
+    max-width: 100%;
+  }
+}
+
+@media (min-width: 768px) {
+  .card {
+    max-width: 47%;
+  }
+}
+@media (min-width: 1024px) {
+  .card {
+    max-width: 25%;
+  }
+}
+
+@media (min-width: 1280px) {
+  .card {
+    max-width: 20%;
+  }
 }

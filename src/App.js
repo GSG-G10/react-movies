@@ -1,6 +1,6 @@
 import './App.css';
-import React from 'react';
-import { Component } from 'react';
+import React , { Component } from 'react';
+import Nav from './components/Nav';
 
 class App extends Component{
 
@@ -8,16 +8,19 @@ class App extends Component{
       items:[],
       isLoaded : false,  
     }
-    componentDidMount(){
-      fetch('https://crossorig.in/https://yts.am/api/v2/list_movies.json')
-          .then(res => res.json())
-          .then(json=>{
-            this.setState({
-              isLoaded : true,
-              items: json,
-            })
-          });
 
+
+    onSearch = (value ) => { fetch(`https://crossorig.in/https://yts.am/api/v2/list_movies.json?sort_by=year&limit=15&query_term=${value||"" }`)
+    .then(res => res.json())
+    .then(json=>{
+      this.setState({
+        isLoaded : true,
+        items: json,
+      })
+    });}
+
+    componentDidMount(){
+      this.onSearch()
     }
 
 
@@ -29,6 +32,7 @@ class App extends Component{
     }else{
           return (
             <div className="App">
+              <Nav onSearch={this.onSearch}></Nav>
                 <ul>
                   {items.data.movies.map(movie =>
                    

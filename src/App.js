@@ -1,5 +1,6 @@
 import './App.css';
-import React, { Component } from 'react';
+import React , { Component } from 'react';
+import Nav from './components/Nav';
 
 class App extends Component{
 
@@ -7,18 +8,19 @@ class App extends Component{
       items:[],
       isLoaded : false,  
     }
-    componentDidMount(){
-        
-      fetch('https://yts.am/api/v2/list_movies.json')
-          .then(res => res.json())
-          .then(json=>{
-            console.log(json);
-            this.setState({
-              isLoaded : true,
-              items: json,
-            })
-          });
 
+
+    onSearch = (value ) => { fetch(`https://crossorig.in/https://yts.am/api/v2/list_movies.json?sort_by=year&limit=15&query_term=${value||"" }`)
+    .then(res => res.json())
+    .then(json=>{
+      this.setState({
+        isLoaded : true,
+        items: json,
+      })
+    });}
+
+    componentDidMount(){
+      this.onSearch()
     }
 
 
@@ -31,7 +33,9 @@ class App extends Component{
       return <div>Loading....</div>;
     }else{
           return (
+         
             <div className="container mx-auto px-4 pt-16">
+              <Nav onSearch={this.onSearch}></Nav>
               {/* <div className="cards-list">
               <MovieCard image="https://image.tmdb.org/t/p/w500//CGJAj5kNWQZypNgUSTTQrFlnG.jpg" name="Jurassic Hunt" rating="6" year="2020" genres={['Action', 'Crime']}/>
               <MovieCard image="https://image.tmdb.org/t/p/w500//xeItgLK9qcafxbd8kYgv7XnMEog.jpg" name="Shang-Chi and the Legend of the Ten Rings" rating="6.5" year="2020" genres={['Action', 'Crime']}/>
@@ -40,7 +44,7 @@ class App extends Component{
 
               </div> */}
                               <ul>
-                  {items.data.movies.map(movie =>
+                  {items.data.movies && items.data.movies.map(movie =>
                    
                     <ul key={movie.id} className="card">
                       <h3>{movie.title}</h3>

@@ -8,8 +8,7 @@ class App extends Component{
       isLoaded : false,  
     }
     componentDidMount(){
-        
-      fetch('https://yts.am/api/v2/list_movies.json')
+      fetch('https://crossorig.in/https://yts.am/api/v2/list_movies.json')
           .then(res => res.json())
           .then(json=>{
             console.log(json);

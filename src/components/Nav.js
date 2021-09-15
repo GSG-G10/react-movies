@@ -9,7 +9,17 @@ class Nav extends React.Component{
 
     render(){
         return(
-            <input type="text" onChange={(e) =>this.props.onSearch(e.target.value)} />
+            <nav className="nav">
+                <div className="container mx-auto px-4 py-6 flex">
+                    <div>
+                        <h1>React Movies</h1>
+                    </div>
+                    <div>
+                        <input type="text" className="search" placeholder="Search" onChange={(e) =>this.props.onSearch(e.target.value)} />
+                    </div>
+
+                </div>
+            </nav>
         )
     }
 }

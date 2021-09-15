@@ -80,12 +80,12 @@
 }
 @media (min-width: 1024px) {
   .card {
-    max-width: 25%;
+    max-width: 23%;
   }
 }
 
 @media (min-width: 1280px) {
   .card {
-    max-width: 20%;
+    max-width: 18%;
   }
 }

@@ -1,0 +1,23 @@
+.nav {
+  border-bottom-width: 1px;
+  border-color: #2d3748;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.search {
+  width: 16rem;
+  font-size: 0.875rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  padding-left: 0.75rem;
+  border: 0;
+  border-radius: 9999px;
+  background-color: #2d3748;
+  line-height: inherit;
+  color: inherit;
+}

@@ -1,4 +1,3 @@
-// import logo from './logo.svg';
 import './App.css';
 import React from 'react';
 import { Component } from 'react';
@@ -22,18 +21,12 @@ class App extends Component{
     }
 
 
-  render(){
-    
-
-    
+  render(){ 
     var {isLoaded , items} = this.state
-    console.log( 'itemssssssssssssssssssssssssss' ,items)
-    console.log()
 
     if(!isLoaded){
       return <div>Loading....</div>;
-    }
-    else{
+    }else{
           return (
             <div className="App">
                 <ul>

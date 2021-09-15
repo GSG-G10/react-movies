@@ -1,0 +1,49 @@
+.card {
+  margin-top: 2rem;
+}
+.image:hover {
+  opacity: 0.75;
+}
+
+.card-body {
+  margin-top: 0.5rem;
+}
+
+.movie-name {
+  margin-top: 0.5rem;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
+.movie-name:hover {
+  color: rgba(209, 213, 219);
+}
+
+.movie-description {
+  display: flex;
+  align-items: center;
+  color: rgba(156, 163, 175);
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  margin-top: 0.25rem;
+}
+
+.rating {
+  margin-left: 0.25rem;
+}
+
+.space {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+
+.genres {
+  color: rgba(156, 163, 175);
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.svg {
+  width: 1rem;
+  color: rgba(245, 158, 11);
+}

@@ -1,5 +1,6 @@
 import React from "react";
-import MovieCard from "./MovieCard";
+import MovieCard from "../MovieCard/MovieCard";
+import "./MovieList.css";
 
 const MovieList = (props) => {
 
@@ -15,8 +16,10 @@ const MovieList = (props) => {
     });
 
     return (
-        <div className="cards-list">
-            {movies}
+        <div className="container mx-auto px-4 pt-8">
+            <div className="cards-list">
+                {movies}
+            </div>
         </div>
     );
 }

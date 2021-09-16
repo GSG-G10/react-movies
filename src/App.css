@@ -2,14 +2,8 @@ body {
   background-color: #1a202c;
   color: #fff;
 }
-.cards-list {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
 
-.pt-16 {
+.pt-8 {
   padding-top: 2rem;
 }
 

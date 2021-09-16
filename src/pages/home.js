@@ -1,7 +1,7 @@
 
 import React from "react";
 import Nav from '../components/Nav/Nav';
-import MovieList from '../components/MovieList/MovieList';
+import MovieList from '../components/MovieList';
 import { getMovies } from "../utils/getMovies";
 import { Loader } from "../components/Loader";
 
@@ -22,7 +22,7 @@ class Home extends React.Component{
                     isLoaded : true,
                     movies: res.data.movies,
                 });
-        });
+            }).catch(err => console.log);
     }
   
     onScroll = () => {
@@ -41,7 +41,7 @@ class Home extends React.Component{
                         movies: [...state.movies, ...res.data.movies],
                     };
                 });
-            });
+            }).catch(err => console.log);
     
         }
     }

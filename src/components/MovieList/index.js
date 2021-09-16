@@ -1,5 +1,5 @@
 import React from "react";
-import MovieCard from "../MovieCard/MovieCard";
+import MovieCard from "../MovieCard";
 import "./MovieList.css";
 
 const MovieList = (props) => {
@@ -12,6 +12,7 @@ const MovieList = (props) => {
                     rating={movie.rating}
                     year={movie.year} 
                     genres={movie.genres}
+                    url={movie.url}
                 />
     });
 

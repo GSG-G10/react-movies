@@ -12,6 +12,7 @@ const MovieList = (props) => {
                     rating={movie.rating}
                     year={movie.year} 
                     genres={movie.genres}
+                    url={movie.url}
                 />
     });
 
